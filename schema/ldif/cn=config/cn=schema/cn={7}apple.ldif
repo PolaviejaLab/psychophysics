@@ -1,8 +1,8 @@
 # AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
-# CRC32 29f1b662
-dn: cn=apple, cn=schema, cn=config
+# CRC32 925a2c59
+dn: cn={7}apple
 objectClass: olcSchemaConfig
-cn: apple
+cn: {7}apple
 olcAttributeTypes: {0}( 1.3.6.1.4.1.250.1.60 NAME 'ttl' EQUALITY integerMatc
  h SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 SINGLE-VALUE )
 olcAttributeTypes: {1}( 1.3.6.1.4.1.63.1000.1.1.1.1.6 NAME 'apple-user-homeu
@@ -619,10 +619,10 @@ olcObjectClasses: {30}( 1.3.6.1.4.1.63.1000.1.1.2.33 NAME 'apple-certificate
  ate $ apple-certificateSigningRequest $ apple-device-guid $ apple-xmlplist 
  $ apple-revocationReason $ apple-revocationDate $ apple-validNotBefore $ ap
  ple-validNotAfter ) )
-#structuralObjectClass: olcSchemaConfig
-#entryUUID: 5f252e0a-ca53-1034-9f17-1fe6d8a24e78
-#creatorsName: cn=config
-#createTimestamp: 20150729153649Z
-#entryCSN: 20150729153649.119059Z#000000#000#000000
-#modifiersName: cn=config
-#modifyTimestamp: 20150729153649Z
+structuralObjectClass: olcSchemaConfig
+entryUUID: 36294828-cb08-1034-90a5-45036b4d8942
+creatorsName: cn=config
+createTimestamp: 20150730131119Z
+entryCSN: 20150730131119.271669Z#000000#000#000000
+modifiersName: cn=config
+modifyTimestamp: 20150730131119Z

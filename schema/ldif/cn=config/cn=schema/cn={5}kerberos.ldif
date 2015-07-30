@@ -1,8 +1,8 @@
 # AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
-# CRC32 f8d432aa
-dn: cn=kerberos, cn=schema, cn=config
+# CRC32 967e465b
+dn: cn={5}kerberos
 objectClass: olcSchemaConfig
-cn: kerberos
+cn: {5}kerberos
 olcAttributeTypes: {0}( 2.16.840.1.113719.1.301.4.1.1 NAME 'krbPrincipalName
  ' EQUALITY caseExactIA5Match SUBSTR caseExactSubstringsMatch SYNTAX 1.3.6.1
  .4.1.1466.115.121.1.26 )
@@ -159,10 +159,10 @@ olcObjectClasses: {10}( 2.16.840.1.113719.1.301.6.16.1 NAME 'krbTicketPolicy
  wableAge ) )
 olcObjectClasses: {11}( 2.16.840.1.113719.1.301.6.17.1 NAME 'krbTicketPolicy
  ' SUP top STRUCTURAL MUST cn )
-#structuralObjectClass: olcSchemaConfig
-#entryUUID: 5f251546-ca53-1034-9f15-1fe6d8a24e78
-#creatorsName: cn=config
-#createTimestamp: 20150729153649Z
-#entryCSN: 20150729153649.119059Z#000000#000#000000
-#modifiersName: cn=config
-#modifyTimestamp: 20150729153649Z
+structuralObjectClass: olcSchemaConfig
+entryUUID: 36291556-cb08-1034-90a3-45036b4d8942
+creatorsName: cn=config
+createTimestamp: 20150730131119Z
+entryCSN: 20150730131119.271669Z#000000#000#000000
+modifiersName: cn=config
+modifyTimestamp: 20150730131119Z

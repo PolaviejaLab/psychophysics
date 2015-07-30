@@ -1,8 +1,8 @@
 # AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
-# CRC32 3dc33495
-dn: cn=samba, cn=schema, cn=config
+# CRC32 537c1bf2
+dn: cn={6}samba
 objectClass: olcSchemaConfig
-cn: samba
+cn: {6}samba
 olcAttributeTypes: {0}( 1.3.6.1.4.1.7165.2.1.4 NAME 'acctFlags' DESC 'Accoun
  t Flags' EQUALITY caseIgnoreIA5Match SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{1
  6} SINGLE-VALUE )
@@ -260,10 +260,10 @@ olcObjectClasses: {11}( 1.3.6.1.4.1.7165.2.2.16 NAME 'sambaTrustedDomain' DE
  mbaFlatName $ sambaTrustAuthOutgoing $ sambaTrustAuthIncoming $ sambaSecuri
  tyIdentifier $ sambaTrustForestTrustInfo $ sambaTrustPosixOffset $ sambaSup
  portedEncryptionTypes ) )
-#structuralObjectClass: olcSchemaConfig
-#entryUUID: 5f251d8e-ca53-1034-9f16-1fe6d8a24e78
-#creatorsName: cn=config
-#createTimestamp: 20150729153649Z
-#entryCSN: 20150729153649.119059Z#000000#000#000000
-#modifiersName: cn=config
-#modifyTimestamp: 20150729153649Z
+structuralObjectClass: olcSchemaConfig
+entryUUID: 362925fa-cb08-1034-90a4-45036b4d8942
+creatorsName: cn=config
+createTimestamp: 20150730131119Z
+entryCSN: 20150730131119.271669Z#000000#000#000000
+modifiersName: cn=config
+modifyTimestamp: 20150730131119Z
