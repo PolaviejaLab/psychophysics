@@ -1,9 +1,9 @@
-dn: cn=$GROUP_NAME,ou=groups,$ROOTDN
-cn: $GROUP_NAME
-gidNumber: $GROUP_ID
+dn: cn=@GROUP_NAME@,ou=groups,@ROOT_DN@
+cn: @GROUP_NAME@
+gidNumber: @GROUP_ID@
 objectClass: top
 objectClass: posixGroup
 objectClass: apple-group
 objectClass: extensibleObject
-apple-group-realname: $GROUP_LONGNAME
-apple-generateduid: $GROUP_UID
+apple-group-realname: @GROUP_LONGNAME@
+apple-generateduid: @GROUP_UID@

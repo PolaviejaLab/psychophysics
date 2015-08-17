@@ -15,13 +15,13 @@ import base64
 l = init_ldap(config)
 
 # Build odconfig for Mac
-t = Template("../../config/plab-ldap/odconfig")
+t = Template("../../config/plab-ldap/templates/odconfig")
 t.replace({'HOMEDIRECTORY': '#/Users/$uid$'})
 t.replace(config)
 odconfig = base64.b64encode(str(t).replace('\n', ''))
 
 for item in ["ou=groups.ldif", "ou=users.ldif", "ou=macosx.ldif"]:
-    t = Template("../../config/plab-ldap/" + item)
+    t = Template("../../config/plab-ldap/templates/" + item)
     t.replace(config)
     t.replace({"ODCONFIG": odconfig})
     insert_ldif(l, str(t))
