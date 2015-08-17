@@ -1,0 +1,5 @@
+dn: cn=config
+changetype: modify
+replace: olcAuthzRegexp
+olcAuthzRegexp: {0}uid=([^,]*),cn=psychophysics,cn=gssapi,cn=auth uid=\$1,ou=people,@ROOTDN@
+

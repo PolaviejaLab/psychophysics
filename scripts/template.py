@@ -4,7 +4,7 @@ import uuid
 
 class Template:
     def __init__(self, name):
-        self.file = open('../templates/' + name)
+        self.file = open(name)
         self.data = self.file.read()
 
         pairs = dict()
@@ -18,6 +18,10 @@ class Template:
             value = pairs[key]
             self.data = re.sub("(@" + key + "@)", value, self.data)
 
+    def write(self, name):
+        file = open(name, "w")
+        file.write(self.__str__())
+        file.close()
 
     def __str__(self):
         return self.data
