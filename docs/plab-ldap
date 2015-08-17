@@ -1,0 +1,31 @@
+
+Setup OpenLDAP
+--------------
+
+We use the password jooChoo9 with SSHA key:
+ {SSHA}8j04FX/7dgKKl2fHE9ZZyi9AZOaqyk+R
+
+Remove any LDAP backups from:
+ /var/backups
+
+Install and configure the OpenLDAP server:
+ # apt-get install slapd
+ # dpkg-reconfigure -plow slapd
+
+Make the following choices:
+ * No
+ * plab-ldap.champalimaud.pt
+ * Psychophysics Lab
+ * Enter password: jooChoo9
+ * MDB
+ * No, don't remove database on purge
+ * Yes, move old database
+ * No, do not allow LDAPv2
+
+Install the schemas
+ ./scripts/plab-ldap/step_1_install_schemas.sh
+
+If EXTERNAL cannot be found as a mechanism, add "external" to the mech_list in /etc/ldap/sasl2/slapd.conf.
+
+Install user and group OUs
+ ./scripts/plab-ldap/step2_create_ous.py
