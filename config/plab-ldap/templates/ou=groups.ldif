@@ -1,0 +1,4 @@
+dn: ou=groups, @ROOT_DN@
+ou: groups
+objectClass: top
+objectClass: organizationalUnit

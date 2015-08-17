@@ -1,0 +1,4 @@
+dn: ou=users, @ROOT_DN@
+ou: users
+objectClass: top
+objectClass: organizationalUnit

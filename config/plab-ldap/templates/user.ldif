@@ -1,0 +1,21 @@
+dn: uid=@USER_NAME@, ou=users, @ROOT_DN@
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: organizationalPerson
+objectClass: apple-user
+objectClass: person
+objectClass: extensibleObject
+objectClass: top
+uid: @USER_NAME@
+sn: @USER_SURNAME@
+givenName: @USER_GIVENNAME@
+cn: @USER_FULLNAME@
+uidNumber: @USER_ID@
+gidNumber: @USER_GROUP_ID@
+userPassword: @USER_PASSWORD_HASH@
+loginShell: /bin/bash
+homeDirectory: @USER_HOME@
+title: @USER_TITLE@
+apple-generateduid: @USER_UID@
+authAuthority: ;basic;
