@@ -111,6 +111,10 @@ kadmin.local -q "addprinc -policy admin root/admin"
 kadmin.local -q "addprinc -policy user ivar.clemens"
 kadmin.local -q "addprinc -policy host -randkey host/$KERBEROS_HOSTNAME.$DOMAIN"
 kadmin.local -q "addprinc -policy host -randkey host/$LDAP_HOSTNAME.$DOMAIN"
+kadmin.local -q "addprinc -policy host -randkey ldap/$KERBEROS_HOSTNAME.$DOMAIN"
 
-kadmin.lcoal -q "ktadd -k /etc/krb5.keytab -norandkey host/$KERBEROS_HOSTNAME.$DOMAIN"
+kadmin.local -q "ktadd -k /etc/krb5.keytab -norandkey host/$KERBEROS_HOSTNAME.$DOMAIN"
 kadmin.local -q "ktadd -k /etc/krb5.keytab -norandkey host/$LDAP_HOSTNAME.$DOMAIN"
+kadmin.local -q "ktadd -k /etc/krb5.keytab -norandkey ldap/$KERBEROS_HOSTNAME.$DOMAIN"
+
+chmod 644 /etc/krb5.keytab
