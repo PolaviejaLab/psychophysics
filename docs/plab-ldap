@@ -12,7 +12,7 @@ Remove any LDAP backups from:
  /var/backups
 
 Install and configure the OpenLDAP server:
- # apt-get install slapd ldap-utils python-ldap
+ # apt-get install slapd ldap-utils python-ldap libsasl2-modules-gssapi-mit
  # dpkg-reconfigure -plow slapd
 
 Make the following choices:
