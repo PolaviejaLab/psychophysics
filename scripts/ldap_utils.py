@@ -69,7 +69,7 @@ def insert_ldif(ldap_server, ldif_string):
             skipped += 1
             continue
 
-        print modlist
+        #print modlist
 
         # Save changes to server
         print "Updating {}".format(record[0])
@@ -122,11 +122,11 @@ def add_to_group(l, config, username, groupname):
 
     dn = "cn={}, ou=groups, {}\n".format(group['cn'][0], config['ROOT_DN'])
 
-    if not user['uid'][0] in group['memberUid']:
+    if (not 'memberUid' in group) or (not user['uid'][0] in group['memberUid']):
         modlist = [(ldap.MOD_ADD, "memberUid", user['uid'][0])]
         l.modify_s(dn, modlist)
 
     apple_uid = user['apple-generateduid'][0]
-    if not apple_uid in group['apple-group-memberguid']:
+    if (not 'apple-group-memberguid' in group) or (not apple_uid in group['apple-group-memberguid']):
         modlist = [(ldap.MOD_ADD, "apple-group-memberguid", apple_uid)]
         l.modify_s(dn, modlist)
