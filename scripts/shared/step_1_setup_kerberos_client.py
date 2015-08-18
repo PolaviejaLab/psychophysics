@@ -11,6 +11,10 @@ from template import Template
 
 import os
 
+# Install Samba (for the net command) and Kerberos
+os.system("apt-get install samba krb5-config krb5-user")
+
+# Setup configuration
 print "Installing Kerberos client configuration"
 
 template = Template("../../config/shared/krb5.conf")

@@ -15,7 +15,7 @@ l = init_ldap(config)
 
 group = {}
 group['GROUP_NAME'] = 'admin'
-group['GROUP_ID'] = '1000'
+group['GROUP_ID'] = '1100'
 group['GROUP_LONGNAME'] = 'Administrators'
 group['GROUP_UID'] = str(uuid.uuid4())
 
@@ -27,7 +27,7 @@ insert_ldif(l, str(t))
 
 group = {}
 group['GROUP_NAME'] = 'user'
-group['GROUP_ID'] = '1001'
+group['GROUP_ID'] = '1101'
 group['GROUP_LONGNAME'] = 'Users'
 group['GROUP_UID'] = str(uuid.uuid4())
 

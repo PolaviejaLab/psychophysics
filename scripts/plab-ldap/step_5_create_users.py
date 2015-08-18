@@ -27,7 +27,7 @@ def get_free_user_id(ldap_server):
     result_id = ldap_server.search("ou=users, " + config['ROOT_DN'], ldap.SCOPE_ONELEVEL)
     result_type, result_data = ldap_server.result(result_id)
 
-    next_number = 1000
+    next_number = 1100
 
     for result in result_data:
         current_number = int(result[1]['uidNumber'][0])

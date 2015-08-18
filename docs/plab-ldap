@@ -2,6 +2,9 @@
 Setup OpenLDAP
 --------------
 
+Before starting, setup Kerberos, see:
+ scripts/shared/step_1_setup_kerberos_client.py
+
 We use the password jooChoo9 with SSHA key:
  {SSHA}8j04FX/7dgKKl2fHE9ZZyi9AZOaqyk+R
 
@@ -9,7 +12,7 @@ Remove any LDAP backups from:
  /var/backups
 
 Install and configure the OpenLDAP server:
- # apt-get install slapd
+ # apt-get install slapd ldap-utils python-ldap
  # dpkg-reconfigure -plow slapd
 
 Make the following choices:
@@ -28,4 +31,7 @@ Install the schemas
 If EXTERNAL cannot be found as a mechanism, add "external" to the mech_list in /etc/ldap/sasl2/slapd.conf.
 
 Install user and group OUs
- ./scripts/plab-ldap/step2_create_ous.py
+ ./scripts/plab-ldap/step_2_create_ous.py
+
+Create admin and users groups
+ ./scripts/plab-ldap/step_3_create_groups.py
