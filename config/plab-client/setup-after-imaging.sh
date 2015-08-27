@@ -87,7 +87,7 @@ fi
 if [[ "$OS" == "Linux" ]];
 then
 	hostname $hostname
-	echo $hostname >> /etc/hostname
+	echo $hostname > /etc/hostname
 	echo "Hostname is set to $hostname"
 fi
 
