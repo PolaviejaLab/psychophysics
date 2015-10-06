@@ -1,0 +1,25 @@
+#!/bin/sh
+# dhclient script ddns updater script
+
+if [ $reason = "BOUND" ]; then
+	HOSTNAME=$(hostname)
+	FQDN=$HOSTNAME.$new_domain_name
+	IP=$new_ip_address
+
+	for i in $( cat /etc/resolv.conf | grep nameserver ); do
+		if [ "$i" != "nameserver" ]; then
+
+			cat <<EOF | nsupdate >> /var/log/ddns.log
+server $i
+zone $new_domain_name
+update delete $FQDN
+update add $FQDN. 86400 A $IP
+show
+send
+answer
+EOF
+		fi
+	done
+fi
+
+
